@@ -17,6 +17,7 @@ script:
   - find .
   - make INSTALL_ROOT=appdir install ; find appdir/
   - mkdir -p appdir/usr/share/applications ; cp thinkgui.desktop appdir/usr/share/applications # FIXME: Do this in the .pro file
+  - mkdir -p appdir/usr/share/icons/hicolor/48x48/apps/ ; cp res/icon.png appdir/usr/share/icons/hicolor/48x48/apps/thinkgui.png # FIXME: Do this in the .pro file
 
 after_success:
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" 
